@@ -24,7 +24,7 @@ func greeting(w http.ResponseWriter, r *http.Request) {
 		if m := r.FormValue("name"); m != "" {
 			message = m
 		}
-		fmt.Fprintf(w, "Hello %s!", message)
+		fmt.Fprintf(w, "Oh, hi %s!", message)
 		return
 	}
 	w.WriteHeader(503)
